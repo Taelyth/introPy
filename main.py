@@ -31,7 +31,7 @@ def apoiar_candidado(nome, vezes):
         # contador = numero + 1
         # print(f'{nome} - {contador}')
         # print(nome, ' - ', str(numero + 1).zfill(2))  # preenche uma string com 0 a esquerda
-        print(nome, ' - ', format(numero + 1, '02d'))   # aplica a formatação de 0 a esquerda em decimal (int)
+        print(nome, ' - ', format(numero + 1, '02d'))  # aplica a formatação de 0 a esquerda em decimal (int)
 
 
 def brincar_de_plim(fim):
@@ -41,6 +41,62 @@ def brincar_de_plim(fim):
         else:
             print(format(numero, '02d'))
             # print('{:0>2}'.format(numero))
+
+
+def exibir_dia_da_semana(numero):
+    if numero == 1:
+        print('Domingo')
+    elif numero == 2:
+        print('Segunda')
+    elif numero == 3:
+        print('Terça')
+    elif numero == 4:
+        print('Quarta')
+    elif numero == 5:
+        print('Quinta')
+    elif numero == 6:
+        print('Sexta')
+    elif numero == 7:
+        print('Sábado')
+    else:
+        print('Dia Inválido')
+
+
+def brincar_de_para_ou_continua():
+    resposta = 'C'  # True significa continua
+
+    # while resposta == 'C' or resposta == 'c':
+    while resposta.upper() == 'C':
+        resposta = input('Digite C para continuar\n')
+
+    print('Você decidiu parar com a brincadeira')
+
+
+# Apenas Python 3.10:
+# def exibir_dia_da_semana_match(numero):
+#     match numero:
+#         case 1:
+#             print('Domingo')
+#         case 2:
+#             print('Segunda')
+#         case 3:
+#             print('Terça')
+#         case 4:
+#             print('Quarta')
+#         case 5:
+#             print('Quinta')
+#         case 6:
+#             print('Sexta')
+#         case 7:
+#             print('Sábado')
+
+# exibe todos os prints infelizmente, não é switch / case
+# def exibir_dia_da_semana_dict(numero):
+#     opcao = {
+#         1: apoiar_candidado('batata', 5),
+#         2: exibir_dia_da_semana(1),
+#     }
+#     print(opcao.get(numero, 'invalido'))
 
 
 # estrutura de identificação / execução do script
@@ -66,3 +122,15 @@ if __name__ == '__main__':
 
     # brincar de Plim do Silvio Santos (resto da divisão por 4 igual a 0)
     brincar_de_plim(16)
+
+    # exemplo de dia da semana com if - elif - else
+    exibir_dia_da_semana(1)
+
+    # exemplo de dia da semana com o match/case
+    # exibir_dia_da_semana_match(1)
+
+    # exemplo de dia da semana com dictionary
+    # exibir_dia_da_semana_dict(1)
+
+    # exemplo de while para e continua
+    brincar_de_para_ou_continua()
