@@ -60,18 +60,17 @@ def sair():
     print('Obrigado e volte sempre!')
 
 
-# def exibir_menu(argumento):
-#     opcao = {
+# def calcular_menu(argumento):
+#     return {
 #         1: calcular_area_do_retangulo(3, 4),
 #         2: calcular_area_do_quadrado(5),
 #         3: calcular_area_do_triangulo(4, 3),
 #         4: contagem_progressiva(1, 10),
 #         5: apoiar_candidado('batata', 5),
 #         6: brincar_de_plim(16),
-#         7: sair()
+#         'Z': sair()
 #
-#     }
-#     print(opcao.get(argumento, 'Opção Inválida'))
+#     }.get(argumento, 'Opção Inválida')
 def calcular_menu(argumento):
     if argumento == '1':
         calcular_area_do_retangulo(3, 4)
